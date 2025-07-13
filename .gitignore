@@ -1,0 +1,29 @@
+.anchor
+.DS_Store
+target
+**/*.rs.bk
+node_modules
+test-ledger
+.yarn
+id.json
+id.json:Zone.Identifier
+*.key
+*.pem
+*.log
+.env
+.env.*
+*.local
+*.secret
+*.cache
+*.tmp
+*.bak
+*.tsbuildinfo
+# Anchor build artifacts
+/target/
+/target/*
+# VSCode
+.vscode/
+# MacOS
+*.DS_Store
+# Windows
+Thumbs.db
