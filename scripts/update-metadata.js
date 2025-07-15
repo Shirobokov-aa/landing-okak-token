@@ -4,7 +4,7 @@ const fs = require("fs");
 
 const MINT = "FTpcEYLwQYJmQFQYiLKpz6fKH5FXS2xxxtWAEJVn27Jm";
 const NEW_URI = "https://raw.githubusercontent.com/Shirobokov-aa/bublik-metadata/main/metadata.json"; // Новый URI на JSON
-const KEYPAIR_PATH = "./id.json";
+const KEYPAIR_PATH = "../id.json";
 
 (async () => {
   try {

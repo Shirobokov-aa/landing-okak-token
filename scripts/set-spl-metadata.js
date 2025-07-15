@@ -5,7 +5,7 @@ const fs = require("fs");
 const MINT = "FTpcEYLwQYJmQFQYiLKpz6fKH5FXS2xxxtWAEJVn27Jm";
 const NAME = "OkakCat";
 const SYMBOL = "OKAK";
-const URI = "https://raw.githubusercontent.com/Shirobokov-aa/bublik-metadata/refs/heads/main/sticker.png";
+const URI = "https://raw.githubusercontent.com/Shirobokov-aa/bublik-metadata/main/metadata.json";
 const KEYPAIR_PATH = "./id.json";
 
 (async () => {
