@@ -1,30 +1,31 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
-import { Copy, ExternalLink, Twitter, MessageCircle, Github, TrendingUp, Coins, Shield, Rocket } from "lucide-react"
-import Link from "next/link"
-import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { Copy, ExternalLink, Twitter, MessageCircle, Github, TrendingUp, Coins, Shield, Rocket } from "lucide-react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function OkakCatLanding() {
   const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text)
-  }
+    navigator.clipboard.writeText(text);
+  };
 
-  const tokenAddress = "FTpcEYLwQYJmQFQYiLKpz6fKH5FXS2xxxtWAEJVn27Jm"
+  const tokenAddress = "FTpcEYLwQYJmQFQYiLKpz6fKH5FXS2xxxtWAEJVn27Jm";
 
   // Ссылки на агрегаторы и соцсети
-  const raydiumUrl = `https://raydium.io/swap/?inputCurrency=sol&outputCurrency=${tokenAddress}`
-  const birdeyeUrl = `https://birdeye.so/token/FTpcEYLwQYJmQFQYiLKpz6fKH5FXS2xxxtWAEJVn27Jm?chain=solana`
-  const solscanUrl = `https://solscan.io/token/FTpcEYLwQYJmQFQYiLKpz6fKH5FXS2xxxtWAEJVn27Jm`
-  const geckoTerminalUrl = `https://www.geckoterminal.com/solana/pools/HVbPdCnHGpXVAXGCR8WXtPdoaCT1AA3p6ts1PBTN7UbX`
-  const orcaUrl = `https://www.orca.so/pools/HVbPdCnHGpXVAXGCR8WXtPdoaCT1AA3p6ts1PBTN7UbX`
-  const jupiterUrl = `https://jup.ag/swap/SOL-FTpcEYLwQYJmQFQYiLKpz6fKH5FXS2xxxtWAEJVn27Jm`
-  const twitterUrl = "https://x.com/1k_airdroptoken" // заменить на реальный
-  const telegramUrl = "https://t.me/airdroptoken_1k" // заменить на реальный
-  const githubUrl = "https://github.com/ваш-репозиторий" // заменить на реальный
+  const raydiumUrl = `https://raydium.io/swap/?inputCurrency=sol&outputCurrency=${tokenAddress}`;
+  const birdeyeUrl = `https://birdeye.so/token/FTpcEYLwQYJmQFQYiLKpz6fKH5FXS2xxxtWAEJVn27Jm?chain=solana`;
+  const solscanUrl = `https://solscan.io/token/FTpcEYLwQYJmQFQYiLKpz6fKH5FXS2xxxtWAEJVn27Jm`;
+  const geckoTerminalUrl = `https://www.geckoterminal.com/solana/pools/HVbPdCnHGpXVAXGCR8WXtPdoaCT1AA3p6ts1PBTN7UbX`;
+  const orcaUrl = `https://www.orca.so/pools/HVbPdCnHGpXVAXGCR8WXtPdoaCT1AA3p6ts1PBTN7UbX`;
+  const jupiterUrl = `https://jup.ag/swap/SOL-FTpcEYLwQYJmQFQYiLKpz6fKH5FXS2xxxtWAEJVn27Jm`;
+  const twitterUrl = "https://x.com/1k_airdroptoken"; // заменить на реальный
+  const telegramUrl = "https://t.me/airdroptoken_1k"; // заменить на реальный
+  const githubUrl = "https://github.com/ваш-репозиторий"; // заменить на реальный
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-950 to-gray-800">
@@ -32,22 +33,36 @@ export default function OkakCatLanding() {
       <header className="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-md border-b border-gray-700">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-pink-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">🐱</span>
+            <div className="w-14 h-14 border-[1px] border-white rounded-full flex items-center justify-center">
+              <span className="text-white font-bold text-lg">
+                <Image src="/images/logo.png" alt="OkakCat" width={54} height={54} className="rounded-full" />
+              </span>
             </div>
-            <span className="font-bold text-xl text-white">OkakCat</span>
+            <span className="font-bold text-xl text-white">OKAK | Token Solana</span>
           </div>
           <nav className="hidden md:flex space-x-6">
-            <Link href="#about" className="text-gray-300 hover:text-orange-400 transition-colors">
+            <Link
+              href="#about"
+              className="text-gray-300 hover:text-orange-400 transition-colors uppercase font-semibold"
+            >
               About
             </Link>
-            <Link href="#tokenomics" className="text-gray-300 hover:text-orange-400 transition-colors">
+            <Link
+              href="#tokenomics"
+              className="text-gray-300 hover:text-orange-400 transition-colors uppercase font-semibold"
+            >
               Tokenomics
             </Link>
-            <Link href="#roadmap" className="text-gray-300 hover:text-orange-400 transition-colors">
+            <Link
+              href="#roadmap"
+              className="text-gray-300 hover:text-orange-400 transition-colors uppercase font-semibold"
+            >
               Roadmap
             </Link>
-            <Link href="#community" className="text-gray-300 hover:text-orange-400 transition-colors">
+            <Link
+              href="#community"
+              className="text-gray-300 hover:text-orange-400 transition-colors uppercase font-semibold"
+            >
               Community
             </Link>
           </nav>
@@ -56,9 +71,9 @@ export default function OkakCatLanding() {
               asChild
               className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white"
             >
-              <a href={raydiumUrl} target="_blank" rel="noopener noreferrer">
+              <a href={orcaUrl} target="_blank" rel="noopener noreferrer">
                 <Rocket className="mr-2 h-5 w-5" />
-                Купить на Raydium
+                Buy on Orca
               </a>
             </Button>
             <Button
@@ -68,7 +83,7 @@ export default function OkakCatLanding() {
             >
               <a href={birdeyeUrl} target="_blank" rel="noopener noreferrer">
                 <TrendingUp className="mr-2 h-5 w-5" />
-                График
+                Graph
               </a>
             </Button>
           </div>
@@ -91,7 +106,9 @@ export default function OkakCatLanding() {
               transition={{ duration: 0.8, type: "spring" }}
               className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-orange-500 to-pink-600 rounded-full flex items-center justify-center shadow-2xl"
             >
-              <span className="text-6xl">🐱</span>
+              <span className="text-6xl">
+                <Image src="/images/logo.png" alt="OkakCat" width={150} height={150} className="rounded-full" />
+              </span>
             </motion.div>
             <Badge className="mb-4 bg-gray-800 text-orange-300 border border-orange-500">Solana Meme Token</Badge>
           </div>
@@ -101,7 +118,7 @@ export default function OkakCatLanding() {
             transition={{ delay: 0.2, duration: 0.7 }}
             className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-pink-500 bg-clip-text text-transparent"
           >
-            OkakCat
+            OKAK | OkakCat | Solana
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -122,7 +139,7 @@ export default function OkakCatLanding() {
           </motion.p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <motion.a
-              href={raydiumUrl}
+              href={orcaUrl}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.07 }}
@@ -134,7 +151,7 @@ export default function OkakCatLanding() {
                 className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 py-3"
               >
                 <Rocket className="mr-2 h-5 w-5" />
-                Купить на Raydium
+                Buy on Orca
               </Button>
             </motion.a>
             <motion.a
@@ -151,7 +168,7 @@ export default function OkakCatLanding() {
                 className="border-orange-500 text-orange-400 hover:bg-orange-500/10 bg-transparent"
               >
                 <TrendingUp className="mr-2 h-5 w-5" />
-                График (Birdeye)
+                Graph (Birdeye)
               </Button>
             </motion.a>
           </div>
@@ -169,10 +186,10 @@ export default function OkakCatLanding() {
       >
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">About OkakCat</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">About OKAK</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              OkakCat isn't just another meme token - it's a community-driven movement celebrating the internet's
-              favorite feline friends while building real utility on Solana.
+              OKAK isn't just another meme token - it's a community-driven movement celebrating the internet's favorite
+              feline friends while building real utility on Solana.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -210,9 +227,14 @@ export default function OkakCatLanding() {
             </div>
             <div className="relative">
               <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 text-center border border-gray-700">
-                <div className="text-8xl mb-4">🐱</div>
+                <div className="text-8xl mb-4 flex items-center justify-center">
+                  <Image src="/images/logo.png" alt="OkakCat" width={150} height={150} className="rounded-full" />
+                </div>
                 <h4 className="text-xl font-bold text-white mb-2">Join the Cat Pack!</h4>
-                <p className="text-gray-300">Over 10,000 holders and growing</p>
+                <p className="text-gray-300">
+                  We need 10,000 holders to make this project successful. Let's do it together!
+                </p>
+                <p className="text-gray-300">Let's help each cat find a home!</p>
               </div>
             </div>
           </div>
@@ -241,7 +263,7 @@ export default function OkakCatLanding() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-3xl font-bold text-orange-500 mb-2">1,000,000,000,000,000</div>
+                  <div className="text-3xl font-bold text-orange-500 mb-2">100,000,000</div>
                   <p className="text-gray-300">Total OKAK tokens</p>
                 </CardContent>
               </Card>
@@ -409,55 +431,61 @@ export default function OkakCatLanding() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Join Our Community</h2>
             <p className="text-xl text-gray-300">Connect with fellow cat lovers and OKAK holders</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <Card className="text-center hover:shadow-lg transition-shadow cursor-pointer bg-gray-900 text-white border border-gray-700 hover:border-blue-500">
-              <CardHeader>
-                <Twitter className="h-12 w-12 text-blue-400 mx-auto mb-4" />
-                <CardTitle>Twitter</CardTitle>
-                <CardDescription className="text-gray-400">Latest updates and memes</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Button
-                  variant="outline"
-                  className="w-full bg-transparent border-blue-500 text-blue-400 hover:bg-blue-500/10"
-                >
-                  Follow Us
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
-              </CardContent>
-            </Card>
-            <Card className="text-center hover:shadow-lg transition-shadow cursor-pointer bg-gray-900 text-white border border-gray-700 hover:border-blue-500">
-              <CardHeader>
-                <MessageCircle className="h-12 w-12 text-blue-400 mx-auto mb-4" />
-                <CardTitle>Telegram</CardTitle>
-                <CardDescription className="text-gray-400">Chat with the community</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Button
-                  variant="outline"
-                  className="w-full bg-transparent border-blue-500 text-blue-400 hover:bg-blue-500/10"
-                >
-                  Join Chat
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
-              </CardContent>
-            </Card>
-            <Card className="text-center hover:shadow-lg transition-shadow cursor-pointer bg-gray-900 text-white border border-gray-700 hover:border-gray-500">
-              <CardHeader>
-                <Github className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                <CardTitle>GitHub</CardTitle>
-                <CardDescription className="text-gray-400">Open source development</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Button
-                  variant="outline"
-                  className="w-full bg-transparent border-gray-500 text-gray-400 hover:bg-gray-500/10"
-                >
-                  View Code
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
-              </CardContent>
-            </Card>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Link href={twitterUrl} target="_blank" rel="noopener noreferrer">
+              <Card className="text-center hover:shadow-lg transition-shadow cursor-pointer bg-gray-900 text-white border border-gray-700 hover:border-blue-500">
+                <CardHeader>
+                  <Twitter className="h-12 w-12 text-blue-400 mx-auto mb-4" />
+                  <CardTitle>Twitter</CardTitle>
+                  <CardDescription className="text-gray-400">Latest updates and memes</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Button
+                    variant="outline"
+                    className="w-full bg-transparent border-blue-500 text-blue-400 hover:bg-blue-500/10"
+                  >
+                    Follow Us
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Button>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href={telegramUrl} target="_blank" rel="noopener noreferrer">
+              <Card className="text-center hover:shadow-lg transition-shadow cursor-pointer bg-gray-900 text-white border border-gray-700 hover:border-blue-500">
+                <CardHeader>
+                  <MessageCircle className="h-12 w-12 text-blue-400 mx-auto mb-4" />
+                  <CardTitle>Telegram</CardTitle>
+                  <CardDescription className="text-gray-400">Chat with the community</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Button
+                    variant="outline"
+                    className="w-full bg-transparent border-blue-500 text-blue-400 hover:bg-blue-500/10"
+                  >
+                    Join Chat
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Button>
+                </CardContent>
+              </Card>
+            </Link>
+            {/* <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
+              <Card className="text-center hover:shadow-lg transition-shadow cursor-pointer bg-gray-900 text-white border border-gray-700 hover:border-gray-500">
+                <CardHeader>
+                  <Github className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+                  <CardTitle>GitHub</CardTitle>
+                  <CardDescription className="text-gray-400">Open source development</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Button
+                    variant="outline"
+                    className="w-full bg-transparent border-gray-500 text-gray-400 hover:bg-gray-500/10"
+                  >
+                    View Code
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Button>
+                </CardContent>
+              </Card>
+            </Link> */}
           </div>
         </div>
       </motion.section>
@@ -540,7 +568,7 @@ export default function OkakCatLanding() {
                   <CardTitle>Trading Platforms</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <Button
+                  {/* <Button
                     asChild
                     variant="outline"
                     className="w-full justify-between bg-transparent border-gray-600 text-gray-300 hover:bg-gray-800"
@@ -549,7 +577,7 @@ export default function OkakCatLanding() {
                       Raydium
                       <ExternalLink className="h-4 w-4" />
                     </a>
-                  </Button>
+                  </Button> */}
                   <Button
                     asChild
                     variant="outline"
@@ -604,14 +632,14 @@ export default function OkakCatLanding() {
               >
                 <MessageCircle className="h-5 w-5" />
               </Link>
-              <Link
+              {/* <Link
                 href={githubUrl}
                 className="text-gray-400 hover:text-gray-300 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Github className="h-5 w-5" />
-              </Link>
+              </Link> */}
             </div>
           </div>
           <Separator className="my-8 bg-gray-700" />
@@ -622,5 +650,5 @@ export default function OkakCatLanding() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
