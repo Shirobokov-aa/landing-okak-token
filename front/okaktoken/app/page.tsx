@@ -13,17 +13,17 @@ export default function OkakCatLanding() {
     navigator.clipboard.writeText(text)
   }
 
-  const tokenAddress = "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgHkv"
+  const tokenAddress = "FTpcEYLwQYJmQFQYiLKpz6fKH5FXS2xxxtWAEJVn27Jm"
 
   // Ссылки на агрегаторы и соцсети
   const raydiumUrl = `https://raydium.io/swap/?inputCurrency=sol&outputCurrency=${tokenAddress}`
-  const birdeyeUrl = `https://birdeye.so/token/${tokenAddress}?chain=solana`
-  const solscanUrl = `https://solscan.io/token/${tokenAddress}`
-  const geckoTerminalUrl = `https://www.geckoterminal.com/solana/pools?search=${tokenAddress}`
-  const orcaUrl = `https://www.orca.so/pools?search=${tokenAddress}`
-  const jupiterUrl = `https://jup.ag/swap/SOL-${tokenAddress}`
-  const twitterUrl = "https://twitter.com/okakcat" // заменить на реальный
-  const telegramUrl = "https://t.me/okakcat" // заменить на реальный
+  const birdeyeUrl = `https://birdeye.so/token/FTpcEYLwQYJmQFQYiLKpz6fKH5FXS2xxxtWAEJVn27Jm?chain=solana`
+  const solscanUrl = `https://solscan.io/token/FTpcEYLwQYJmQFQYiLKpz6fKH5FXS2xxxtWAEJVn27Jm`
+  const geckoTerminalUrl = `https://www.geckoterminal.com/solana/pools/HVbPdCnHGpXVAXGCR8WXtPdoaCT1AA3p6ts1PBTN7UbX`
+  const orcaUrl = `https://www.orca.so/pools/HVbPdCnHGpXVAXGCR8WXtPdoaCT1AA3p6ts1PBTN7UbX`
+  const jupiterUrl = `https://jup.ag/swap/SOL-FTpcEYLwQYJmQFQYiLKpz6fKH5FXS2xxxtWAEJVn27Jm`
+  const twitterUrl = "https://x.com/1k_airdroptoken" // заменить на реальный
+  const telegramUrl = "https://t.me/airdroptoken_1k" // заменить на реальный
   const githubUrl = "https://github.com/ваш-репозиторий" // заменить на реальный
 
   return (
